@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <title>Document</title>
+     <title>Calculator</title>
 </head>
 <body>
     
@@ -16,12 +16,12 @@
   Choose Calculator Mode
 </h2>
      <div class="flex gap-10">
-     <div class="group relative w-40 h-40 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform bg-blue-400 m-2">
+     <div class="calculator-box group transition-all duration-300  relative w-40 h-40 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform m-2 [background-image:linear-gradient(120deg,#2828ff,#7ba3ff)] " data-mode="basic">
   <img src="basic.jpg"
-       class="absolute inset-0 w-full h-full object-cover translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-0" />
+       class="calc-img absolute inset-0 w-full h-full object-cover translate-y-full group-hover:translate-y-0 [group.selected]:translate-y-0 transition-transform duration-500 z-0" />
   <div class="relative z-10 flex flex-col justify-center items-center h-full text-white">
-    <span class="text-2xl font-bold  ">Basic</span>
-    <span class="absolute bottom-12 text-base px-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="text-2xl font-bold">Basic</span>
+    <span class="calc-text absolute bottom-10 text-base opacity-0 group-hover:opacity-100 [class~='selected']:opacity-100 transition-opacity duration-300">
       + - x ÷ 
     </span>
   </div>
@@ -29,12 +29,12 @@
     
           <!--Scientific-->
      <div class="flex flex-col items-center ">
-          <div class="group relative w-40 h-40 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform bg-green-500 m-2">
+          <div class=" calculator-box group transition-all duration-300  relative w-40 h-40 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform  m-2 [background-image:linear-gradient(120deg,#ffed28,#fef57b)]" data-mode="scientific">
   <img src="science.avif"
-       class="absolute inset-0 w-full h-full object-cover translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-0" />
+       class="calc-img absolute inset-0 w-full h-full object-cover translate-y-full group-hover:translate-y-0 [group.selected]:translate-y-0 transition-transform duration-500 z-0" />
   <div class="relative z-10 flex flex-col justify-center items-center h-full text-white">
     <span class="text-2xl font-bold text-black ">Scientific</span>
-    <span class="absolute bottom-11 text-base text-black px-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="calc-text absolute bottom-11 text-base text-black px-4 text-sm opacity-0 group-hover:opacity-100 [class~='selected']:opacity-100 transition-opacity duration-300">
       sin, cos, tan, log
     </span>
   </div>
@@ -44,19 +44,24 @@
      </div>
       <!--Programming-->
            <div class="flex flex-col items-center">
-     <div class="group relative w-40 h-40 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform bg-yellow-300 m-2">
+     <div class="calculator-box group transition-all duration-300  relative w-40 h-40 overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform m-2 [background-image:linear-gradient(120deg,#fe33be,#ff7bcf)]" data-mode="programming">
   <img src="program.jpg"
-       class="absolute inset-0 w-full h-full object-cover translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-0" />
+       class="calc-img absolute inset-0 w-full h-full object-cover translate-y-full group-hover:translate-y-0 [group.selected]:translate-y-0 transition-transform duration-500 z-0" />
   <div class="relative z-10 flex flex-col justify-center items-center h-full text-white">
     <span class="text-2xl font-bold text-black-100 ">Programming</span>
-    <span class="absolute bottom-10 text-base px-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="calc-text absolute bottom-10 text-base px-4 text-sm opacity-0 group-hover:opacity-100 [class~='selected']:opacity-100 transition-opacity duration-300">
      Bin, Hex, AND, OR
     </span>
   </div>
 </div>
 </div>
  </div>
+
+ <button class="mt-10 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition hidden"  id="continueBtn">Continue</button>
   </div>   
   </div>
+
+  
+  <script src="script.js"></script>
 </body>
 </html>
