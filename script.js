@@ -21,3 +21,8 @@ boxes.forEach(box => {
     continueBtn.classList.remove('hidden');
   });
 });
+continueBtn.addEventListner('click',()=>{
+if(selectedMode){
+window.location.href=`${selectedMode}.html`;
+}
+});
