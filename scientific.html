@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+      body{
+               display: flex;justify-content: center;
+               margin:20px;align-items: center;
+               background: linear-gradient(90deg,rgb(182, 227, 238)
+               ,rgb(174, 242, 248));
+          }.mainContainer{
+               height:25rem;width:28rem;
+               border:1px outset rgb(158, 197, 255);border-radius: 20px;
+               background:linear-gradient(135deg,rgb(11, 121, 247),rgb(3, 36, 96),
+               rgb(70, 16, 249));
+               
+          }#display{
+                  height:4.4rem;width:23rem;
+                  background:linear-gradient(to bottom ,rgb(220, 232, 252),
+                  rgb(172, 178, 232));
+                  border-radius: 5px;margin:15px;
+                  font-size:x-large;color:rgb(26, 25, 25);
+                  border:none;outline:none;
+          }.btn{
+               height:30px; width:50px;
+               border:1px solid rgb(3, 99, 183);background: rgb(64, 145, 215);
+               border-radius: 2px;margin-top: 10px;margin-left:16px;font-weight: bold;
+               color:rgb(6, 0, 0);font-size:large;padding-right:15px;
+          }#zero{
+               height:33px;width:5.5rem;
+               border:1px solid rgb(3, 99, 183);
+               background: rgb(64, 145, 215);border-radius: 2px;
+               margin-top: 10px; margin-left:15px; font-weight: bold;
+               color:rgb(6, 0, 0);
+               font-size:x-large;padding-right:5px; 
+          }
+          #point,#minus,#equalto{
+               height:33px; width:32px;
+               border:1px solid rgb(3, 99, 183); background: rgb(64, 145, 215);
+               border-radius: 1px; margin-top: 10px;
+               margin-left:13px;margin-right:2px; font-weight: bold;
+               color:rgb(6, 0, 0); font-size:x-large;padding-right:5px;
+               text-align: center;  
+          }
+         .button-container {
+      position: relative;
+    }
 
+    .button {
+      padding: 20px 50px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #c1d7ec, #f0faff);
+      color: #000;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: inset 0 0 5px #fff;
+    }
+
+    .droplet {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: inset -3px -3px 10px rgba(255, 255, 255, 0.8),
+                  inset 3px 3px 8px rgba(0, 0, 0, 0.1),
+                  0 4px 6px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3px);
+      pointer-events: none;
+    }   
+      
+     </style>
+
+     <title>Document</title>
+</head>
+<body>
+     <div class
+="mainContainer">
+          <input id="display" type="text"></input>
+          <button class="btn droplet-button">1</button>
+          <button  class="btn">2</button>
+          <button  class="btn">3</button>
+          <button  class="btn">4</button>
+          <button  class="btn">5</button> 
+          <button class="btn" id="clear">C</button>
+          
+          <div >
+         <button   class="btn ">6</button>
+         <button   class="btn">7</button>
+         <button   class="btn">8</button>
+          <button   class="btn">9</button>
+          <button  class="btn">0</button> 
+          <button  class="btn">+</button> 
+         
+          </div> 
+     <div >
+          <button   class="btn"> x² </button>
+          <button class="btn" >x3</button>
+          <button  class="btn">x^y</button>
+          <button  class="btn">∛x</button>
+          <button class="btn"> √x</button>
+          <button  class="btn">×</button> 
+          
+     </div> 
+          <div>
+          <button  class="btn"> log₁₀</button>
+          <button  class="btn">logₓ</button>
+          <button  class="btn">ln</button>
+          <button  class="btn">sin</button>
+          <button  class="btn">cos</button>
+          <button  class="btn">÷</button>
+     </div> 
+     <div>
+          
+          <button  class="btn">tan</button>
+          <button class="btn">sin⁻¹</button>
+          <button class="btn">cos⁻¹</button>
+          <button class="btn">tan⁻¹</button>
+          <button class="btn">sinh</button>
+          <button  class="btn">-</button> 
+          
+          
+     </div>
+     <div>
+          <button class="btn">cosh</button>
+          <button class="btn">tanh</button>
+          <button class="btn">Σx</button>
+          <button class="btn">Σx²</button>
+          <button class="btn">n!</button>
+          <button  class="btn">%</button>
+     </div>
+     
+           <div>
+          <button class="btn">nCr</button>
+          <button class="btn">nPr</button>
+          <button id="zero" class="btn">EXP</button>
+          <button id="point" class="btn">.</button>
+          <button id="equalto" class="btn">=</button>
+       </div>
+     </div>
+
+</body>
+</html>
